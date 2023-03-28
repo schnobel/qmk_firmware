@@ -97,12 +97,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return false;
         case SCHN_M1:
             if (record->event.pressed) {
-                SEND_STRING(SS_DOWN(X_LALT) "H" SS_UP(X_LALT) "MC");
+                SEND_STRING_DELAY(SS_TAP(X_LALT)"HMC", 75);
                 return true;
             }
         case SCHN_M0:
             if (record->event.pressed) {
-                SEND_STRING(SS_TAP(X_APP) "V");
+                SEND_STRING(SS_TAP(X_APP)"V");
                 return true;
             }
 	}
