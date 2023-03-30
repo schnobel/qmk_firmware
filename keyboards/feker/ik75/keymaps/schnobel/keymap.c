@@ -1,5 +1,6 @@
 /* Copyright 2022 Feker
  * Copyright 2022 HorrorTroll <https://github.com/HorrorTroll>
+ * Copyright 2023 schnobel (schnobel@ickis.net)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -28,20 +29,20 @@ enum custom_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[_BASE] = LAYOUT(
-                KC_ESC,     RGUI(KC_V), KC_F2,        KC_F3,       KC_F4,       KC_F5,       SCHN_M1,     KC_F7,       KC_F8,       KC_F9,       KC_F10,          KC_F11,      KC_F12,     KC_DEL,                    KC_NO, 
-                KC_GRV,     KC_1,       KC_2,         KC_3,        KC_4,        KC_5,        KC_6,        KC_7,        KC_8,        KC_9,        KC_0,            KC_MINS,     KC_EQL,     KC_BSPC,                   KC_HOME,
-                KC_TAB,     KC_Q,       KC_W,         KC_E,        KC_R,        KC_T,        KC_Y,        KC_U,        KC_I,        KC_O,        KC_P,            KC_LBRC,     KC_RBRC,    KC_BSLS,                   KC_END,
-                KC_CAPS,    KC_A,       KC_S,         KC_D,        KC_F,        KC_G,        KC_H,        KC_J,        KC_K,        KC_L,        KC_SCLN,         KC_QUOT,                 KC_ENT,                    KC_PGUP,
-                KC_LSFT,                KC_Z,         KC_X,        KC_C,        KC_V,        KC_B,        KC_N,        KC_M,        KC_COMM,     KC_DOT,          KC_SLSH,                 KC_RSFT,      KC_UP,       KC_PGDN,
-                KC_LCTL,    KC_LGUI,    KC_LALT,                                             KC_SPC,                                KC_RALT,     LT(1,KC_APP),    KC_RCTL,                 KC_LEFT,      KC_DOWN,     KC_RGHT
+                KC_ESC,     RGUI(KC_V), KC_F2,        KC_F3,       KC_F4,       KC_F5,       SCHN_M1,     KC_F7,       KC_F8,       KC_F9,       KC_F10,            KC_F11,      KC_F12,     KC_DEL,                    KC_NO, 
+                KC_GRV,     KC_1,       KC_2,         KC_3,        KC_4,        KC_5,        KC_6,        KC_7,        KC_8,        KC_9,        KC_0,              KC_MINS,     KC_EQL,     KC_BSPC,                   KC_HOME,
+                KC_TAB,     KC_Q,       KC_W,         KC_E,        KC_R,        KC_T,        KC_Y,        KC_U,        KC_I,        KC_O,        KC_P,              KC_LBRC,     KC_RBRC,    KC_BSLS,                   KC_END,
+                KC_CAPS,    KC_A,       KC_S,         KC_D,        KC_F,        KC_G,        KC_H,        KC_J,        KC_K,        KC_L,        KC_SCLN,           KC_QUOT,                 KC_ENT,                    KC_PGUP,
+                KC_LSFT,                KC_Z,         KC_X,        KC_C,        KC_V,        KC_B,        KC_N,        KC_M,        KC_COMM,     KC_DOT,            KC_SLSH,                 KC_RSFT,      KC_UP,       KC_PGDN,
+                KC_LCTL,    KC_LGUI,    KC_LALT,                                             KC_SPC,                                KC_RALT,     LT(_FN, KC_APP),   KC_RCTL,                 KC_LEFT,      KC_DOWN,     KC_RGHT
             ),
 	[_FN] = LAYOUT(
-                QK_BOOT,    KC_F1,      _______,      _______,     _______,     LCA(KC_F5),  RCS(KC_L),   _______,     _______,     _______,     _______,         KC_SCRL,     KC_NUM,     G(KC_L),                   RGB_TOG,
-                _______,    MEH(KC_1),  _______,      _______,     _______,     LCA(KC_F5),  _______,     _______,     _______,     _______,     _______,         RGB_VAD,     RGB_VAI,    _______,                   KC_PSCR,
-                _______,    _______,    _______,      C(G(KC_E)),  C(G(KC_R)),  MEH(KC_T),   _______,     _______,     _______,     _______,     _______,         _______,     _______,    _______,                   RGB_TOG,
-                NK_TOGG,    C(G(KC_A)), _______,      C(G(KC_D)),  MEH(KC_F),   _______,     _______,     _______,     _______,     _______,     _______,         _______,                 _______,                   RGB_RMOD,
-                _______,                C(G(KC_Z)),   _______,     _______,     SCHN_M0,     _______,     _______,     _______,     _______,     _______,         _______,                 _______,      RGB_HUI,     RGB_MOD,
-                _______,    _______,    _______,                                             _______,                               KC_RGUI,     _______,         KC_APP,                  RGB_SAD,      RGB_HUD,     RGB_SAI
+                QK_BOOT,    KC_F1,      _______,      _______,     _______,     LCA(KC_F5),  RCS(KC_L),   _______,     _______,     _______,     _______,           KC_SCRL,     KC_NUM,     G(KC_L),                   RGB_TOG,
+                _______,    MEH(KC_1),  _______,      _______,     _______,     LCA(KC_F5),  _______,     _______,     _______,     _______,     _______,           RGB_VAD,     RGB_VAI,    _______,                   KC_PSCR,
+                _______,    _______,    _______,      C(G(KC_E)),  C(G(KC_R)),  MEH(KC_T),   _______,     _______,     _______,     _______,     _______,           _______,     _______,    _______,                   RGB_TOG,
+                NK_TOGG,    C(G(KC_A)), _______,      C(G(KC_D)),  MEH(KC_F),   _______,     _______,     _______,     _______,     _______,     _______,           _______,                 _______,                   RGB_RMOD,
+                _______,                C(G(KC_Z)),   _______,     _______,     SCHN_M0,     _______,     _______,     _______,     _______,     _______,           _______,                 _______,      RGB_HUI,     RGB_MOD,
+                _______,    _______,    _______,                                             _______,                               KC_RGUI,     _______,           KC_APP,                  RGB_SAD,      RGB_HUD,     RGB_SAI
             ),
 };
 
@@ -78,11 +79,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 SEND_STRING_DELAY(SS_TAP(X_LALT)"HMC", 75);
                 return true;
             }
+            break;
         case SCHN_M0:
             if (record->event.pressed) {
                 SEND_STRING_DELAY(SS_TAP(X_APP)"V", 75);
                 return true;
             }
+            break;
 	}
 
     return true;
