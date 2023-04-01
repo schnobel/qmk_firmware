@@ -57,6 +57,7 @@ CMakeLists.txt
 
 # Let these ones be user specific, since we have so many different configurations
 *.code-workspace
+.vscode
 .stfolder
 .tags
 .vscode/c_cpp_properties.json
@@ -107,3 +108,4 @@ compile_commands.json
 
 # VIA(L) json files that don't belong in QMK repo
 via*.json
+.gitignore
