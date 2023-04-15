@@ -1,1 +1,2 @@
-COMMAND_ENABLE = yes        # Commands for debug and configuration
+VIA_ENABLE = no
+TAP_DANCE_ENABLE = no
